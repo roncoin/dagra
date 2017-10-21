@@ -2,7 +2,7 @@ package=bdb
 $(package)_version=4.8.30
 $(package)_download_path=http://ftpmirror.your.org/pub/misc/Berkeley-DB/
 $(package)_file_name=db-$($(package)_version).tar.gz
-$(package)_sha256_hash=C7682037C39B9840A09C5847812D3BABCBA86EC6AE27F7D65AEA6BBAFAF62210
+$(package)_sha256_hash=e0491a07cdb21fb9aa82773bbbedaeb7639cbd0e7f96147ab46141e0045db72a
 $(package)_build_subdir=build_unix
 
 define $(package)_set_vars

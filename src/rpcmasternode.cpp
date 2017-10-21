@@ -55,8 +55,8 @@ Value darksend(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() == 0)
         throw runtime_error(
-            "darksend <owncoinaddress> <amount>\n"
-            "owncoinaddress, reset, or auto (AutoDenominate)"
+            "darksend <dagraaddress> <amount>\n"
+            "dagraaddress, reset, or auto (AutoDenominate)"
             "<amount> is a real and will be rounded to the next 0.1"
             + HelpRequiringPassphrase());
 
@@ -77,8 +77,8 @@ Value darksend(const Array& params, bool fHelp)
 
     if (params.size() != 2)
         throw runtime_error(
-            "darksend <owncoinaddress> <amount>\n"
-            "owncoinaddress, denominate, or auto (AutoDenominate)"
+            "darksend <dagraaddress> <amount>\n"
+            "dagraaddress, denominate, or auto (AutoDenominate)"
             "<amount> is a real and will be rounded to the next 0.1"
             + HelpRequiringPassphrase());
 

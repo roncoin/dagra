@@ -188,7 +188,7 @@
         <translation>錢包已加密</translation>
     </message>
     <message>
-        <source>Dagra will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your owncoins from being stolen by malware infecting your computer.</source>
+        <source>Dagra will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your dagras from being stolen by malware infecting your computer.</source>
         <translation>達世幣軟體現在要關閉，好完成加密程序。請注意，加密錢包不能完全防止入侵你的電腦的惡意程式偷取達世幣。</translation>
     </message>
     <message>
@@ -3181,7 +3181,7 @@ https://www.transifex.com/projects/p/dagra/</translation>
     </message>
     <message>
         <source>InstantX doesn't support sending values that high yet. Transactions are currently limited to %1 DAGRA.</source>
-        <translation>即時到帳系統暫時並不支援這麼高的交易金額。目前的金額僅限於%1 OWNCOIN。</translation>
+        <translation>即時到帳系統暫時並不支援這麼高的交易金額。目前的金額僅限於%1 DAGRA。</translation>
     </message>
 </context>
 <context>

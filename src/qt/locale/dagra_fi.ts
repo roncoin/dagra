@@ -177,7 +177,7 @@
     </message>
     <message>
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR DAGRA&lt;/b&gt;!</source>
-        <translation>Varoitus: Jos salaat lompakon ja unohdat salasanan, &lt;b&gt;MENETÄT KAIKKI OWNCOINisi&lt;/b&gt;!</translation>
+        <translation>Varoitus: Jos salaat lompakon ja unohdat salasanan, &lt;b&gt;MENETÄT KAIKKI DAGRAisi&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -188,8 +188,8 @@
         <translation>Lompakko salattu</translation>
     </message>
     <message>
-        <source>Dagra will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your owncoins from being stolen by malware infecting your computer.</source>
-        <translation>Dagra sulkeutuu nyt salauksen viimeistelyä varten. Muista että salaus pelkästään ei voi estää Owncoiniesi varastamista jos koneesi saastuu haittaohjelmilla tai viruksilla.</translation>
+        <source>Dagra will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your dagras from being stolen by malware infecting your computer.</source>
+        <translation>Dagra sulkeutuu nyt salauksen viimeistelyä varten. Muista että salaus pelkästään ei voi estää Dagraiesi varastamista jos koneesi saastuu haittaohjelmilla tai viruksilla.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -1570,7 +1570,7 @@ https://www.transifex.com/projects/p/dagra/</translation>
     </message>
     <message>
         <source>Cannot start dagra: click-to-pay handler</source>
-        <translation>Ei voi käynnistää Owncoinia: click-to-pay handler</translation>
+        <translation>Ei voi käynnistää Dagraia: click-to-pay handler</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -3278,7 +3278,7 @@ Näillä toiminnoilla voit korjata korruptoituneen lohkoketjun tai puuttuvat/van
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation>Lähetä Owncoineja</translation>
+        <translation>Lähetä Dagraeja</translation>
     </message>
     <message>
         <source>InstantX doesn't support sending values that high yet. Transactions are currently limited to %1 DAGRA.</source>
@@ -3717,10 +3717,10 @@ Näillä toiminnoilla voit korjata korruptoituneen lohkoketjun tai puuttuvat/van
 Käännös päivitetty: 1.9.2015 by AjM.</translation>
     </message>
     <message>
-        <source>To use owncoind, or the -server option to dagra-qt, you must set an rpcpassword in the configuration file:
+        <source>To use dagrad, or the -server option to dagra-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=owncoinrpc
+rpcuser=dagrarpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -3728,10 +3728,10 @@ If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
 for example: alertnotify=echo %%s | mail -s "Dagra Alert" admin@foo.com
 </source>
-        <translation>Käyttääksesi owncoind:ia tai -server valintaa dagra-qt:lle, sinun tulee asettaa rpc salasana asetustiedostossa:
+        <translation>Käyttääksesi dagrad:ia tai -server valintaa dagra-qt:lle, sinun tulee asettaa rpc salasana asetustiedostossa:
 %s
 Suositellaan että käytät allaolevaa satunnaista salasanaa:
-rpcuser=owncoinrpc
+rpcuser=dagrarpc
 rpcpassword=%s
 (sinun ei tarvitse muistaa tätä salasanaa)
 Käyttäjätunnus ja salasana on oltava ERILAISET.

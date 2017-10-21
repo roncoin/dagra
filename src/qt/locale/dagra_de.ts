@@ -188,7 +188,7 @@
         <translation>Wallet verschlüsselt</translation>
     </message>
     <message>
-        <source>Dagra will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your owncoins from being stolen by malware infecting your computer.</source>
+        <source>Dagra will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your dagras from being stolen by malware infecting your computer.</source>
         <translation>Dagra wird jetzt beendet, um den Verschlüsselungsprozess abzuschließen. Bitte beachten Sie, dass die Wallet-Verschlüsselung nicht vollständig vor Diebstahl ihrer Dagra durch Schadsoftware schützt, die ihren Computer befällt.</translation>
     </message>
     <message>
@@ -3710,10 +3710,10 @@ Dies kann passieren, wenn einige Dagra aus ihrer Wallet bereits ausgegeben wurde
         <translation>Dieses Produkt enthält vom OpenSSL-Projekt entwickelte Software zur Benutzung des OpenSSL Toolkit &lt;https://www.openssl.org/&gt;, kryptographische Software geschrieben von Eric Young und UPnP Software geschrieben von Thomas Bernard.</translation>
     </message>
     <message>
-        <source>To use owncoind, or the -server option to dagra-qt, you must set an rpcpassword in the configuration file:
+        <source>To use dagrad, or the -server option to dagra-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=owncoinrpc
+rpcuser=dagrarpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -3721,10 +3721,10 @@ If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
 for example: alertnotify=echo %%s | mail -s "Dagra Alert" admin@foo.com
 </source>
-        <translation>Um owncoind (oder dagra-qt mit dem -server Parameter) zu benutzen müssen Sie ein rpcpasswort in dieser Konfigurationsdatei angeben:
+        <translation>Um dagrad (oder dagra-qt mit dem -server Parameter) zu benutzen müssen Sie ein rpcpasswort in dieser Konfigurationsdatei angeben:
 %s
 Es wird empfohlen das folgende Zufallspasswort zu verwenden:
-rpcuser=owncoinrpc
+rpcuser=dagrarpc
 rpcpassword=%s
 (Sie müssen sich dieses Passwort nicht merken!)
 Der Benutzername und das Passwort dürfen NICHT identisch sein.

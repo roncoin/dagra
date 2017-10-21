@@ -20,8 +20,8 @@ QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
     unitlist.append(DAGRA);
-    unitlist.append(mOWNCOIN);
-    unitlist.append(uOWNCOIN);
+    unitlist.append(mDAGRA);
+    unitlist.append(uDAGRA);
     unitlist.append(duffs);
     return unitlist;
 }
@@ -31,8 +31,8 @@ bool BitcoinUnits::valid(int unit)
     switch(unit)
     {
     case DAGRA:
-    case mOWNCOIN:
-    case uOWNCOIN:
+    case mDAGRA:
+    case uDAGRA:
     case duffs:
         return true;
     default:
@@ -45,8 +45,8 @@ QString BitcoinUnits::id(int unit)
     switch(unit)
     {
         case DAGRA: return QString("dagra");
-        case mOWNCOIN: return QString("mowncoin");
-        case uOWNCOIN: return QString::fromUtf8("uowncoin");
+        case mDAGRA: return QString("mdagra");
+        case uDAGRA: return QString::fromUtf8("udagra");
         case duffs: return QString("duffs");
         default: return QString("???");
     }
@@ -59,8 +59,8 @@ QString BitcoinUnits::name(int unit)
         switch(unit)
         {
             case DAGRA: return QString("DAGRA");
-            case mOWNCOIN: return QString("mOWNCOIN");
-            case uOWNCOIN: return QString::fromUtf8("μOWNCOIN");
+            case mDAGRA: return QString("mDAGRA");
+            case uDAGRA: return QString::fromUtf8("μDAGRA");
             case duffs: return QString("duffs");
             default: return QString("???");
         }
@@ -69,9 +69,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case DAGRA: return QString("tOWNCOIN");
-            case mOWNCOIN: return QString("mtOWNCOIN");
-            case uOWNCOIN: return QString::fromUtf8("μtOWNCOIN");
+            case DAGRA: return QString("tDAGRA");
+            case mDAGRA: return QString("mtDAGRA");
+            case uDAGRA: return QString::fromUtf8("μtDAGRA");
             case duffs: return QString("tduffs");
             default: return QString("???");
         }
@@ -85,8 +85,8 @@ QString BitcoinUnits::description(int unit)
         switch(unit)
         {
             case DAGRA: return QString("Dagra");
-            case mOWNCOIN: return QString("Milli-Dagra (1 / 1" THIN_SP_UTF8 "000)");
-            case uOWNCOIN: return QString("Micro-Dagra (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case mDAGRA: return QString("Milli-Dagra (1 / 1" THIN_SP_UTF8 "000)");
+            case uDAGRA: return QString("Micro-Dagra (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             case duffs: return QString("Ten Nano-Dagra (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
@@ -95,10 +95,10 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case DAGRA: return QString("TestOwncoins");
-            case mOWNCOIN: return QString("Milli-TestOwncoin (1 / 1" THIN_SP_UTF8 "000)");
-            case uOWNCOIN: return QString("Micro-TestOwncoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
-            case duffs: return QString("Ten Nano-TestOwncoin (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case DAGRA: return QString("TestDagras");
+            case mDAGRA: return QString("Milli-TestDagra (1 / 1" THIN_SP_UTF8 "000)");
+            case uDAGRA: return QString("Micro-TestDagra (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case duffs: return QString("Ten Nano-TestDagra (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
     }
@@ -109,8 +109,8 @@ qint64 BitcoinUnits::factor(int unit)
     switch(unit)
     {
     case DAGRA:  return 100000000;
-    case mOWNCOIN: return 100000;
-    case uOWNCOIN: return 100;
+    case mDAGRA: return 100000;
+    case uDAGRA: return 100;
     case duffs: return 1;
     default:   return 100000000;
     }
@@ -121,8 +121,8 @@ int BitcoinUnits::decimals(int unit)
     switch(unit)
     {
     case DAGRA: return 8;
-    case mOWNCOIN: return 5;
-    case uOWNCOIN: return 2;
+    case mDAGRA: return 5;
+    case uDAGRA: return 2;
     case duffs: return 0;
     default: return 0;
     }

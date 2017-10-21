@@ -7,9 +7,9 @@ User=dagra
 Group=dagra
 
 Type=forking
-PIDFile=/var/lib/owncoind/owncoind.pid
-ExecStart=/usr/bin/owncoind -daemon -pid=/var/lib/owncoind/owncoind.pid \
--conf=/etc/dagra/dagra.conf -datadir=/var/lib/owncoind -disablewallet
+PIDFile=/var/lib/dagrad/dagrad.pid
+ExecStart=/usr/bin/dagrad -daemon -pid=/var/lib/dagrad/dagrad.pid \
+-conf=/etc/dagra/dagra.conf -datadir=/var/lib/dagrad -disablewallet
 
 Restart=always
 PrivateTmp=true

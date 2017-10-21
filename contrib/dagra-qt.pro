@@ -376,7 +376,7 @@ SOURCES += src/activemasternode.cpp \
            src/darksend.cpp \
            src/dagra-cli.cpp \
            src/dagra-tx.cpp \
-           src/owncoind.cpp \
+           src/dagrad.cpp \
            src/db.cpp \
            src/eccryptoverify.cpp \
            src/ecwrapper.cpp \
@@ -472,7 +472,7 @@ SOURCES += src/activemasternode.cpp \
            src/qt/csvmodelwriter.cpp \
            src/qt/darksendconfig.cpp \
            src/qt/dagra.cpp \
-           src/qt/owncoinstrings.cpp \
+           src/qt/dagrastrings.cpp \
            src/qt/editaddressdialog.cpp \
            src/qt/guiutil.cpp \
            src/qt/intro.cpp \
@@ -550,7 +550,7 @@ SOURCES += src/activemasternode.cpp \
            src/test/sighash_tests.cpp \
            src/test/sigopcount_tests.cpp \
            src/test/skiplist_tests.cpp \
-           src/test/test_owncoin.cpp \
+           src/test/test_dagra.cpp \
            src/test/timedata_tests.cpp \
            src/test/transaction_tests.cpp \
            src/test/uint256_tests.cpp \
@@ -641,20 +641,20 @@ SOURCES += src/activemasternode.cpp \
            src/leveldb/helpers/memenv/memenv.cc \
            src/leveldb/helpers/memenv/memenv_test.cc \
            src/secp256k1/src/java/org_bitcoin_NativeSecp256k1.c
-RESOURCES += src/qt/dagra.qrc src/qt/owncoin_locale.qrc
-TRANSLATIONS += src/qt/locale/owncoin_bg.ts \
-                src/qt/locale/owncoin_de.ts \
-                src/qt/locale/owncoin_en.ts \
-                src/qt/locale/owncoin_es.ts \
-                src/qt/locale/owncoin_fi.ts \
-                src/qt/locale/owncoin_fr.ts \
-                src/qt/locale/owncoin_it.ts \
-                src/qt/locale/owncoin_ja.ts \
-                src/qt/locale/owncoin_pl.ts \
-                src/qt/locale/owncoin_pt.ts \
-                src/qt/locale/owncoin_ru.ts \
-                src/qt/locale/owncoin_sk.ts \
-                src/qt/locale/owncoin_sv.ts \
-                src/qt/locale/owncoin_vi.ts \
-                src/qt/locale/owncoin_zh_CN.ts \
-                src/qt/locale/owncoin_zh_TW.ts
+RESOURCES += src/qt/dagra.qrc src/qt/dagra_locale.qrc
+TRANSLATIONS += src/qt/locale/dagra_bg.ts \
+                src/qt/locale/dagra_de.ts \
+                src/qt/locale/dagra_en.ts \
+                src/qt/locale/dagra_es.ts \
+                src/qt/locale/dagra_fi.ts \
+                src/qt/locale/dagra_fr.ts \
+                src/qt/locale/dagra_it.ts \
+                src/qt/locale/dagra_ja.ts \
+                src/qt/locale/dagra_pl.ts \
+                src/qt/locale/dagra_pt.ts \
+                src/qt/locale/dagra_ru.ts \
+                src/qt/locale/dagra_sk.ts \
+                src/qt/locale/dagra_sv.ts \
+                src/qt/locale/dagra_vi.ts \
+                src/qt/locale/dagra_zh_CN.ts \
+                src/qt/locale/dagra_zh_TW.ts

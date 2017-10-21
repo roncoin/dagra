@@ -40,7 +40,7 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>io.dagra.OwncoinPayment</string>
+      <string>io.dagra.DagraPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>dagra</string>

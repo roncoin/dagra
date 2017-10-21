@@ -58,8 +58,8 @@ public:
     enum Unit
     {
         DAGRA,
-        mOWNCOIN,
-        uOWNCOIN,
+        mDAGRA,
+        uDAGRA,
         duffs
     };
 

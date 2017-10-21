@@ -7,6 +7,6 @@ Comment[tr]=Dagra, eşten eşe kriptografik sanal para birimi
 Exec=dagra-qt %u
 Terminal=false
 Type=Application
-Icon=owncoin128
+Icon=dagra128
 MimeType=x-scheme-handler/dagra;
 Categories=Office;Finance;

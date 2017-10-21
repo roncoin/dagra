@@ -6,9 +6,9 @@ and tests weren't explicitly disabled.
 
 After configuring, they can be run with 'make check'.
 
-To run the owncoind tests manually, launch src/test/test_owncoin .
+To run the dagrad tests manually, launch src/test/test_dagra .
 
-To add more owncoind tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
+To add more dagrad tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
 .cpp files in the test/ directory or add new .cpp files that
 implement new BOOST_AUTO_TEST_SUITE sections.
 

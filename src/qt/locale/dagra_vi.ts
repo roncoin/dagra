@@ -188,7 +188,7 @@
         <translation>Ví đã được mã hoá.</translation>
     </message>
     <message>
-        <source>Dagra will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your owncoins from being stolen by malware infecting your computer.</source>
+        <source>Dagra will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your dagras from being stolen by malware infecting your computer.</source>
         <translation>Dagra sẽ được đóng lại bây giờ để hoàn thành tiến trình mã hoá. Hãy nhớ rằng mã hoá ví của bạn không thể hoàn toàn bảo vệ dagra khỏi bị trộm bởi những mã độc lây nhiễm vào máy tính của bạn.</translation>
     </message>
     <message>
@@ -3710,10 +3710,10 @@ https://www.transifex.com/projects/p/dagra/</translation>
         <translation>Sản phẩm này có kèm theo phần mềm được phát triển bởi dự án OpenSSL để sử dụng các công cụ OpenSSL &lt;https://www.openssl.org/&gt; và phần mềm mã hoá được viết bởi Eric Young và phần mềm UPnP được viết bởi Thomas Bernard.</translation>
     </message>
     <message>
-        <source>To use owncoind, or the -server option to dagra-qt, you must set an rpcpassword in the configuration file:
+        <source>To use dagrad, or the -server option to dagra-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=owncoinrpc
+rpcuser=dagrarpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -3721,10 +3721,10 @@ If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
 for example: alertnotify=echo %%s | mail -s "Dagra Alert" admin@foo.com
 </source>
-        <translation>Để sử dụng owncoind, hoặc tuỳ chọn -server với dagra-qt, bạn phải đặt một mật khẩu rpcpassword trong tệp cấu hình:
+        <translation>Để sử dụng dagrad, hoặc tuỳ chọn -server với dagra-qt, bạn phải đặt một mật khẩu rpcpassword trong tệp cấu hình:
 %s
 Gợi ý rằng bạn nên sử dụng những mật khẩu ngẫu nhiên sau:
-rpcuser=owncoinrpc
+rpcuser=dagrarpc
 rpcpassword=%s
 (bạn không cần thiết phải nhớ mật khẩu này)
 Username và mật khẩu KHÔNG ĐƯỢC giống nhau.

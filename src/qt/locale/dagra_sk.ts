@@ -188,8 +188,8 @@
         <translation>Peňaženka zašifrovaná</translation>
     </message>
     <message>
-        <source>Dagra will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your owncoins from being stolen by malware infecting your computer.</source>
-        <translation>OwncoinCoin sa teraz ukončí, aby dokončil proces šifrovania. Nezabudnite, že zašifrovanie vašej peňaženky nemôže plne chrániť Vaše mince pred krádežou škodlivým softvérom, ktorý napadol váš počítač.</translation>
+        <source>Dagra will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your dagras from being stolen by malware infecting your computer.</source>
+        <translation>DagraCoin sa teraz ukončí, aby dokončil proces šifrovania. Nezabudnite, že zašifrovanie vašej peňaženky nemôže plne chrániť Vaše mince pred krádežou škodlivým softvérom, ktorý napadol váš počítač.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -3709,10 +3709,10 @@ https://www.transifex.com/projects/p/dagra/</translation>
         <translation>Tento produkt obsahuje softvér vyvinutý projektom OpenSSL pre použitie sady nástrojov OpenSSL &lt;https://www.openssl.org/&gt; a kryptografického softvéru napísaného Eric Young a UPnP softvér napísaný Thomas Bernard.</translation>
     </message>
     <message>
-        <source>To use owncoind, or the -server option to dagra-qt, you must set an rpcpassword in the configuration file:
+        <source>To use dagrad, or the -server option to dagra-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=owncoinrpc
+rpcuser=dagrarpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -3723,7 +3723,7 @@ for example: alertnotify=echo %%s | mail -s "Dagra Alert" admin@foo.com
         <translation>Pre použitie možnosti -server pre dagra-qt, musíte nastaviť rpcpassword v konfiguračnom súbore:
 %s
 Doporučuje sa použiť nasledovné náhodné heslo:
-rpcuser=owncoinrpc
+rpcuser=dagrarpc
 rpcpassword=%s
 (toto heslo si nemusíte pamätať)
 Používateľské meno a heslo NEMÔŽU byť rovnaké.

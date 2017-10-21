@@ -2,6 +2,6 @@
 host = https://www.transifex.com
 
 [dagra.qt-translation-010x]
-file_filter = src/qt/locale/owncoin_<lang>.ts
-source_file = src/qt/locale/owncoin_en.ts
+file_filter = src/qt/locale/dagra_<lang>.ts
+source_file = src/qt/locale/dagra_en.ts
 source_lang = en

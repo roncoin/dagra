@@ -1,6 +1,6 @@
 Mac OS X Build Instructions and Notes
 ====================================
-This guide will show you how to build owncoind (headless client) for OSX.
+This guide will show you how to build dagrad (headless client) for OSX.
 
 Notes
 -----
@@ -63,14 +63,14 @@ After exiting, you'll get a warning that the install is keg-only, which means it
     $ brew link --force berkeley-db4
 
 
-### Building `owncoind`
+### Building `dagrad`
 
 1. Clone the github tree to get the source code and go into the directory.
 
         git clone https://github.com/MegaPixel-UA/dagra.git
         cd dagra
 
-2.  Build owncoind:
+2.  Build dagrad:
 
         ./autogen.sh
         ./configure
@@ -80,7 +80,7 @@ After exiting, you'll get a warning that the install is keg-only, which means it
 
         make check
 
-4.  (Optional) You can also install owncoind to your path:
+4.  (Optional) You can also install dagrad to your path:
 
         make install
 
@@ -102,11 +102,11 @@ Download Qt Creator from http://www.qt.io/download/. Download the "community edi
 
 Creating a release build
 ------------------------
-You can ignore this section if you are building `owncoind` for your own use.
+You can ignore this section if you are building `dagrad` for your own use.
 
-owncoind/dagra-cli binaries are not included in the Dagra-Qt.app bundle.
+dagrad/dagra-cli binaries are not included in the Dagra-Qt.app bundle.
 
-If you are building `owncoind` or `Dagra-Qt` for others, your build machine should be set up
+If you are building `dagrad` or `Dagra-Qt` for others, your build machine should be set up
 as follows for maximum compatibility:
 
 All dependencies should be compiled with these flags:
@@ -121,13 +121,13 @@ bundle is packaged and signed to create the .dmg disk image that is distributed.
 Running
 -------
 
-It's now available at `./owncoind`, provided that you are still in the `src`
+It's now available at `./dagrad`, provided that you are still in the `src`
 directory. We have to first create the RPC configuration file, though.
 
-Run `./owncoind` to get the filename where it should be put, or just try these
+Run `./dagrad` to get the filename where it should be put, or just try these
 commands:
 
-    echo -e "rpcuser=owncoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Dagra/dagra.conf"
+    echo -e "rpcuser=dagrarpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Dagra/dagra.conf"
     chmod 600 "/Users/${USER}/Library/Application Support/Dagra/dagra.conf"
 
 The next time you run it, it will start downloading the blockchain, but it won't
@@ -139,6 +139,6 @@ you can monitor its process by looking at the debug.log file, like this:
 Other commands:
 -------
 
-    ./owncoind -daemon # to start the dagra daemon.
+    ./dagrad -daemon # to start the dagra daemon.
     ./dagra-cli --help  # for a list of command-line options.
     ./dagra-cli help    # When the daemon is running, to get a list of RPC commands

@@ -60,7 +60,7 @@ bin_PROGRAMS =
 TESTS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += owncoind
+  bin_PROGRAMS += dagrad
 endif
 
 if BUILD_BITCOIN_UTILS
@@ -170,7 +170,7 @@ obj/build.h: FORCE
 	  $(abs_top_srcdir)
 libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between owncoind and dagra-qt
+# server: shared between dagrad and dagra-qt
 libbitcoin_server_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS)
 libbitcoin_server_a_SOURCES = \
   addrman.cpp \
@@ -202,7 +202,7 @@ libbitcoin_server_a_SOURCES = \
   $(JSON_H) \
   $(BITCOIN_CORE_H)
 
-# wallet: shared between owncoind and dagra-qt, but only linked
+# wallet: shared between dagrad and dagra-qt, but only linked
 # when wallet enabled
 libbitcoin_wallet_a_CPPFLAGS = $(BITCOIN_INCLUDES)
 libbitcoin_wallet_a_SOURCES = \
@@ -278,7 +278,7 @@ univalue_libbitcoin_univalue_a_SOURCES = \
   univalue/univalue_escapes.h \
   univalue/univalue.h
 
-# common: shared between owncoind, and dagra-qt and non-server tools
+# common: shared between dagrad, and dagra-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(BITCOIN_INCLUDES)
 libbitcoin_common_a_SOURCES = \
   allocators.cpp \
@@ -343,7 +343,7 @@ nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
 # bitcoind binary #
-owncoind_LDADD = \
+dagrad_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UNIVALUE) \
@@ -354,35 +354,35 @@ owncoind_LDADD = \
   $(LIBSECP256K1)
 
 if ENABLE_WALLET
-owncoind_LDADD += libbitcoin_wallet.a
+dagrad_LDADD += libbitcoin_wallet.a
 endif
-owncoind_SOURCES = owncoind.cpp
+dagrad_SOURCES = dagrad.cpp
 #
 
 if TARGET_WINDOWS
-owncoind_SOURCES += owncoind-res.rc
+dagrad_SOURCES += dagrad-res.rc
 endif
 
-owncoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS)
-owncoind_CPPFLAGS = $(BITCOIN_INCLUDES)
-owncoind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+dagrad_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS)
+dagrad_CPPFLAGS = $(BITCOIN_INCLUDES)
+dagrad_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 # dagra-cli binary #
-owncoin_cli_LDADD = \
+dagra_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBBITCOIN_UTIL) \
   $(BOOST_LIBS) \
   $(SSL_LIBS) \
   $(CRYPTO_LIBS)
 
-owncoin_cli_SOURCES = \
+dagra_cli_SOURCES = \
   dagra-cli.cpp
 
-owncoin_cli_CPPFLAGS = $(BITCOIN_INCLUDES)
+dagra_cli_CPPFLAGS = $(BITCOIN_INCLUDES)
 #
 
 # dagra-tx binary #
-owncoin_tx_LDADD = \
+dagra_tx_LDADD = \
   $(LIBBITCOIN_UNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
@@ -391,15 +391,15 @@ owncoin_tx_LDADD = \
   $(BOOST_LIBS) \
   $(CRYPTO_LIBS)
 
-owncoin_tx_SOURCES = dagra-tx.cpp
-owncoin_tx_CPPFLAGS = $(BITCOIN_INCLUDES)
+dagra_tx_SOURCES = dagra-tx.cpp
+dagra_tx_CPPFLAGS = $(BITCOIN_INCLUDES)
 #
-owncoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+dagra_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-owncoin_cli_SOURCES += dagra-cli-res.rc
+dagra_cli_SOURCES += dagra-cli-res.rc
 endif
-owncoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+dagra_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if BUILD_BITCOIN_LIBS
 include_HEADERS = script/bitcoinconsensus.h

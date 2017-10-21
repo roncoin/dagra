@@ -235,8 +235,8 @@
     </message>
     <message>
         <location line="-57"/>
-        <source>Dagra will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your owncoins from being stolen by malware infecting your computer.</source>
-        <translation>Dagra will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your owncoins from being stolen by malware infecting your computer.</translation>
+        <source>Dagra will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your dagras from being stolen by malware infecting your computer.</source>
+        <translation>Dagra will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your dagras from being stolen by malware infecting your computer.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4244,7 +4244,7 @@ https://www.transifex.com/projects/p/dagra/</translation>
 <context>
     <name>dagra-core</name>
     <message>
-        <location filename="../owncoinstrings.cpp" line="+22"/>
+        <location filename="../dagrastrings.cpp" line="+22"/>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
         <translation>Bind to given address and always listen on it. Use [host]:port notation for IPv6</translation>
     </message>
@@ -4730,10 +4730,10 @@ https://www.transifex.com/projects/p/dagra/</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>To use owncoind, or the -server option to dagra-qt, you must set an rpcpassword in the configuration file:
+        <source>To use dagrad, or the -server option to dagra-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=owncoinrpc
+rpcuser=dagrarpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -4741,10 +4741,10 @@ If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
 for example: alertnotify=echo %%s | mail -s &quot;Dagra Alert&quot; admin@foo.com
 </source>
-        <translation>To use owncoind, or the -server option to dagra-qt, you must set an rpcpassword in the configuration file:
+        <translation>To use dagrad, or the -server option to dagra-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=owncoinrpc
+rpcuser=dagrarpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.

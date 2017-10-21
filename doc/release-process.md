@@ -151,7 +151,7 @@ rm SHA256SUMS
 
 - Announce the release:
 
-  - Release sticky on owncointalk: https://owncointalk.org/index.php?board=1.0 ***TODO***
+  - Release sticky on dagratalk: https://dagratalk.org/index.php?board=1.0 ***TODO***
 
   - Dagra-development mailing list
 

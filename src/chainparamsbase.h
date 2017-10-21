@@ -9,7 +9,7 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between dagra-cli and owncoind)
+ * CBaseChainParams defines the base parameters (shared between dagra-cli and dagrad)
  * of a given instance of the Dagra system.
  */
 class CBaseChainParams

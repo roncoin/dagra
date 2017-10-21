@@ -14,9 +14,9 @@ AC_CONFIG_MACRO_DIR([build-aux/m4])
 
 AC_CANONICAL_HOST
 
-AH_TOP([#ifndef OWNCOIN_CONFIG_H])
-AH_TOP([#define OWNCOIN_CONFIG_H])
-AH_BOTTOM([#endif //OWNCOIN_CONFIG_H])
+AH_TOP([#ifndef DAGRA_CONFIG_H])
+AH_TOP([#define DAGRA_CONFIG_H])
+AH_BOTTOM([#endif //DAGRA_CONFIG_H])
 
 dnl faketime breaks configure and is only needed for make. Disable it here.
 unset FAKETIME
@@ -185,7 +185,7 @@ AC_ARG_WITH([libs],
 
 AC_ARG_WITH([daemon],
   [AS_HELP_STRING([--with-daemon],
-  [build owncoind daemon (default=yes)])],
+  [build dagrad daemon (default=yes)])],
   [build_bitcoind=$withval],
   [build_bitcoind=yes])
 
@@ -719,7 +719,7 @@ LIBS="$LIBS_TEMP"
 
 BITCOIN_QT_PATH_PROGS([PROTOC], [protoc],$protoc_bin_path)
 
-AC_MSG_CHECKING([whether to build owncoind])
+AC_MSG_CHECKING([whether to build dagrad])
 AM_CONDITIONAL([BUILD_BITCOIND], [test x$build_bitcoind = xyes])
 AC_MSG_RESULT($build_bitcoind)
 
@@ -823,7 +823,7 @@ if test x$bitcoin_enable_qt != xno; then
     AC_MSG_WARN("xgettext is required to update qt translations")
   fi
 
-  AC_MSG_CHECKING([whether to build test_owncoin-qt])
+  AC_MSG_CHECKING([whether to build test_dagra-qt])
   if test x$use_tests$bitcoin_enable_qt_test = xyesyes; then
     AC_MSG_RESULT([yes])
     BUILD_TEST_QT="test"
@@ -832,7 +832,7 @@ if test x$bitcoin_enable_qt != xno; then
   fi
 fi
 
-AC_MSG_CHECKING([whether to build test_owncoin])
+AC_MSG_CHECKING([whether to build test_dagra])
 if test x$use_tests = xyes; then
   AC_MSG_RESULT([yes])
   BUILD_TEST="test"

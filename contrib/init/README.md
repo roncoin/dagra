@@ -1,9 +1,9 @@
 Sample configuration files for:
 
-SystemD: owncoind.service
-Upstart: owncoind.conf
-OpenRC:  owncoind.openrc
-         owncoind.openrcconf
+SystemD: dagrad.service
+Upstart: dagrad.conf
+OpenRC:  dagrad.openrc
+         dagrad.openrcconf
 
 have been made available to assist packagers in creating node packages here.
 

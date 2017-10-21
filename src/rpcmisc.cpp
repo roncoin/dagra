@@ -247,14 +247,14 @@ Value validateaddress(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() != 1)
         throw runtime_error(
-            "validateaddress \"owncoinaddress\"\n"
+            "validateaddress \"dagraaddress\"\n"
             "\nReturn information about the given dagra address.\n"
             "\nArguments:\n"
-            "1. \"owncoinaddress\"     (string, required) The dagra address to validate\n"
+            "1. \"dagraaddress\"     (string, required) The dagra address to validate\n"
             "\nResult:\n"
             "{\n"
             "  \"isvalid\" : true|false,         (boolean) If the address is valid or not. If not, this is the only property returned.\n"
-            "  \"address\" : \"owncoinaddress\", (string) The dagra address validated\n"
+            "  \"address\" : \"dagraaddress\", (string) The dagra address validated\n"
             "  \"ismine\" : true|false,          (boolean) If the address is yours or not\n"
             "  \"isscript\" : true|false,        (boolean) If the key is a script\n"
             "  \"pubkey\" : \"publickeyhex\",    (string) The hex value of the raw public key\n"
@@ -402,10 +402,10 @@ Value verifymessage(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() != 3)
         throw runtime_error(
-            "verifymessage \"owncoinaddress\" \"signature\" \"message\"\n"
+            "verifymessage \"dagraaddress\" \"signature\" \"message\"\n"
             "\nVerify a signed message\n"
             "\nArguments:\n"
-            "1. \"owncoinaddress\"  (string, required) The dagra address to use for the signature.\n"
+            "1. \"dagraaddress\"  (string, required) The dagra address to use for the signature.\n"
             "2. \"signature\"       (string, required) The signature provided by the signer in base 64 encoding (see signmessage).\n"
             "3. \"message\"         (string, required) The message that was signed.\n"
             "\nResult:\n"

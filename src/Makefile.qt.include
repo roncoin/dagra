@@ -3,22 +3,22 @@ EXTRA_LIBRARIES += qt/libbitcoinqt.a
 
 # dagra qt core #
 QT_TS = \
-  qt/locale/owncoin_bg.ts \
-  qt/locale/owncoin_de.ts \
-  qt/locale/owncoin_en.ts \
-  qt/locale/owncoin_es.ts \
-  qt/locale/owncoin_fi.ts \
-  qt/locale/owncoin_fr.ts \
-  qt/locale/owncoin_it.ts \
-  qt/locale/owncoin_ja.ts \
-  qt/locale/owncoin_pl.ts \
-  qt/locale/owncoin_pt.ts \
-  qt/locale/owncoin_ru.ts \
-  qt/locale/owncoin_sk.ts \
-  qt/locale/owncoin_sv.ts \
-  qt/locale/owncoin_vi.ts \
-  qt/locale/owncoin_zh_CN.ts \
-  qt/locale/owncoin_zh_TW.ts
+  qt/locale/dagra_bg.ts \
+  qt/locale/dagra_de.ts \
+  qt/locale/dagra_en.ts \
+  qt/locale/dagra_es.ts \
+  qt/locale/dagra_fi.ts \
+  qt/locale/dagra_fr.ts \
+  qt/locale/dagra_it.ts \
+  qt/locale/dagra_ja.ts \
+  qt/locale/dagra_pl.ts \
+  qt/locale/dagra_pt.ts \
+  qt/locale/dagra_ru.ts \
+  qt/locale/dagra_sk.ts \
+  qt/locale/dagra_sv.ts \
+  qt/locale/dagra_vi.ts \
+  qt/locale/dagra_zh_CN.ts \
+  qt/locale/dagra_zh_TW.ts
 
 QT_FORMS_UI = \
   qt/forms/addressbookpage.ui \
@@ -96,10 +96,10 @@ QT_MOC = \
   qt/overviewpage.moc \
   qt/rpcconsole.moc
 
-QT_QRC_CPP = qt/qrc_owncoin.cpp
+QT_QRC_CPP = qt/qrc_dagra.cpp
 QT_QRC = qt/dagra.qrc
-QT_QRC_LOCALE_CPP = qt/qrc_owncoin_locale.cpp
-QT_QRC_LOCALE = qt/owncoin_locale.qrc
+QT_QRC_LOCALE_CPP = qt/qrc_dagra_locale.cpp
+QT_QRC_LOCALE = qt/dagra_locale.qrc
 
 PROTOBUF_CC = qt/paymentrequest.pb.cc
 PROTOBUF_H = qt/paymentrequest.pb.h
@@ -207,13 +207,13 @@ RES_ICONS = \
   qt/res/icons/tx_input.png \
   qt/res/icons/tx_output.png \
   qt/res/icons/tx_mined.png \
-  qt/res/icons/unit_owncoin.png \
-  qt/res/icons/unit_mowncoin.png \
-  qt/res/icons/unit_uowncoin.png \
+  qt/res/icons/unit_dagra.png \
+  qt/res/icons/unit_mdagra.png \
+  qt/res/icons/unit_udagra.png \
   qt/res/icons/unit_duffs.png \
-  qt/res/icons/unit_towncoin.png \
-  qt/res/icons/unit_tmowncoin.png \
-  qt/res/icons/unit_tuowncoin.png \
+  qt/res/icons/unit_tdagra.png \
+  qt/res/icons/unit_tmdagra.png \
+  qt/res/icons/unit_tudagra.png \
   qt/res/icons/unit_tduffs.png
 
 BITCOIN_QT_CPP = \
@@ -273,7 +273,7 @@ RES_IMAGES = \
   qt/res/images/about.png \
   qt/res/images/splash.png \
   qt/res/images/splash_testnet.png \
-  qt/res/images/owncoin_logo_horizontal.png \
+  qt/res/images/dagra_logo_horizontal.png \
   qt/res/images/drkblue_downArrow.png \
   qt/res/images/drkblue_downArrow_small.png \
   qt/res/images/drkblue_upArrow_small.png \
@@ -308,7 +308,7 @@ QT_FORMS_H=$(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:
 # Most files will depend on the forms and moc files as includes. Generate them
 # before anything else.
 $(QT_MOC): $(QT_FORMS_H)
-$(qt_libbitcoinqt_a_OBJECTS) $(qt_owncoin_qt_OBJECTS) : | $(QT_MOC)
+$(qt_libbitcoinqt_a_OBJECTS) $(qt_dagra_qt_OBJECTS) : | $(QT_MOC)
 
 #Generating these with a half-written protobuf header leads to wacky results.
 #This makes sure it's done.
@@ -316,42 +316,42 @@ $(QT_MOC): $(PROTOBUF_H)
 $(QT_MOC_CPP): $(PROTOBUF_H)
 
 # dagra-qt binary #
-qt_owncoin_qt_CPPFLAGS = $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+qt_dagra_qt_CPPFLAGS = $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
   $(QT_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS)
 
-qt_owncoin_qt_SOURCES = qt/dagra.cpp
+qt_dagra_qt_SOURCES = qt/dagra.cpp
 if TARGET_DARWIN
-  qt_owncoin_qt_SOURCES += $(BITCOIN_MM)
+  qt_dagra_qt_SOURCES += $(BITCOIN_MM)
 endif
 if TARGET_WINDOWS
-  qt_owncoin_qt_SOURCES += $(BITCOIN_RC)
+  qt_dagra_qt_SOURCES += $(BITCOIN_RC)
 endif
-qt_owncoin_qt_LDADD = qt/libbitcoinqt.a $(LIBBITCOIN_SERVER)
+qt_dagra_qt_LDADD = qt/libbitcoinqt.a $(LIBBITCOIN_SERVER)
 if ENABLE_WALLET
-qt_owncoin_qt_LDADD += $(LIBBITCOIN_WALLET)
+qt_dagra_qt_LDADD += $(LIBBITCOIN_WALLET)
 endif
-qt_owncoin_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(LIBBITCOIN_UNIVALUE) $(LIBLEVELDB) $(LIBMEMENV) \
+qt_dagra_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(LIBBITCOIN_UNIVALUE) $(LIBLEVELDB) $(LIBMEMENV) \
   $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(LIBSECP256K1)
-qt_owncoin_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-qt_owncoin_qt_LIBTOOLFLAGS = --tag CXX
+qt_dagra_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+qt_dagra_qt_LIBTOOLFLAGS = --tag CXX
 
 #locale/foo.ts -> locale/foo.qm
 QT_QM=$(QT_TS:.ts=.qm)
 
 .SECONDARY: $(QT_QM)
 
-qt/owncoinstrings.cpp: $(libbitcoin_server_a_SOURCES) $(libbitcoin_wallet_a_SOURCES) $(libbitcoin_common_a_SOURCES)
+qt/dagrastrings.cpp: $(libbitcoin_server_a_SOURCES) $(libbitcoin_wallet_a_SOURCES) $(libbitcoin_common_a_SOURCES)
 	@test -n $(XGETTEXT) || echo "xgettext is required for updating translations"
 	$(AM_V_GEN) cd $(srcdir); XGETTEXT=$(XGETTEXT) ../share/qt/extract_strings_qt.py $^
 
-translate: qt/owncoinstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
+translate: qt/dagrastrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
 	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts qt/locale/owncoin_en.ts
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts qt/locale/dagra_en.ts
 
 $(QT_QRC_LOCALE_CPP): $(QT_QRC_LOCALE) $(QT_QM)
 	@test -f $(RCC)
 	@test -f $(@D)/$(<F) || cp -f $< $(@D)
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name owncoin_locale $(@D)/$(<F) | \
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name dagra_locale $(@D)/$(<F) | \
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
 $(QT_QRC_CPP): $(QT_QRC) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_CSS) $(RES_MOVIES) $(PROTOBUF_H)
@@ -363,10 +363,10 @@ CLEAN_QT = $(nodist_qt_libbitcoinqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda 
 
 CLEANFILES += $(CLEAN_QT)
 
-owncoin_qt_clean: FORCE
-	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_owncoin_qt_OBJECTS) qt/dagra-qt$(EXEEXT) $(LIBBITCOINQT)
+dagra_qt_clean: FORCE
+	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_dagra_qt_OBJECTS) qt/dagra-qt$(EXEEXT) $(LIBBITCOINQT)
 
-owncoin_qt : qt/dagra-qt$(EXEEXT)
+dagra_qt : qt/dagra-qt$(EXEEXT)
 
 ui_%.h: %.ui
 	@test -f $(UIC)

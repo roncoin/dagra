@@ -5,21 +5,21 @@
 if [ -d "/var/lib/dagra/.dagra" ]; then
 	BITCOIND_DEFAULT_DATADIR="/var/lib/dagra/.dagra"
 else
-	BITCOIND_DEFAULT_DATADIR="/var/lib/owncoind"
+	BITCOIND_DEFAULT_DATADIR="/var/lib/dagrad"
 fi
 
 BITCOIND_CONFIGFILE=${BITCOIND_CONFIGFILE:-/etc/dagra/dagra.conf}
-BITCOIND_PIDDIR=${BITCOIND_PIDDIR:-/var/run/owncoind}
-BITCOIND_PIDFILE=${BITCOIND_PIDFILE:-${BITCOIND_PIDDIR}/owncoind.pid}
+BITCOIND_PIDDIR=${BITCOIND_PIDDIR:-/var/run/dagrad}
+BITCOIND_PIDFILE=${BITCOIND_PIDFILE:-${BITCOIND_PIDDIR}/dagrad.pid}
 BITCOIND_DATADIR=${BITCOIND_DATADIR:-${BITCOIND_DEFAULT_DATADIR}}
 BITCOIND_USER=${BITCOIND_USER:-dagra}
 BITCOIND_GROUP=${BITCOIND_GROUP:-dagra}
-BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/owncoind}
+BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/dagrad}
 
 name="Dagra Core Daemon"
 description="Dagra crypto-currency p2p network daemon"
 
-command="/usr/bin/owncoind"
+command="/usr/bin/dagrad"
 command_args="-pid=\"${BITCOIND_PIDFILE}\" \
 		-conf=\"${BITCOIND_CONFIGFILE}\" \
 		-datadir=\"${BITCOIND_DATADIR}\" \
@@ -65,7 +65,7 @@ checkconfig()
 {
 	if ! grep -qs '^rpcpassword=' "${BITCOIND_CONFIGFILE}" ; then
 		eerror ""
-		eerror "ERROR: You must set a secure rpcpassword to run owncoind."
+		eerror "ERROR: You must set a secure rpcpassword to run dagrad."
 		eerror "The setting must appear in ${BITCOIND_CONFIGFILE}"
 		eerror ""
 		eerror "This password is security critical to securing wallets "

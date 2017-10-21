@@ -80,7 +80,7 @@ bool AppInit(int argc, char* argv[])
         else
         {
             strUsage += "\n" + _("Usage:") + "\n" +
-                  "  owncoind [options]                     " + _("Start Dagra Core Daemon") + "\n";
+                  "  dagrad [options]                     " + _("Start Dagra Core Daemon") + "\n";
 
             strUsage += "\n" + HelpMessage(HMM_BITCOIND);
         }
@@ -124,7 +124,7 @@ bool AppInit(int argc, char* argv[])
 
         if (fCommandLine)
         {
-            fprintf(stderr, "Error: There is no RPC client functionality in owncoind anymore. Use the dagra-cli utility instead.\n");
+            fprintf(stderr, "Error: There is no RPC client functionality in dagrad anymore. Use the dagra-cli utility instead.\n");
             exit(1);
         }
 #ifndef WIN32
@@ -188,7 +188,7 @@ int main(int argc, char* argv[])
 {
     SetupEnvironment();
 
-    // Connect owncoind signal handlers
+    // Connect dagrad signal handlers
     noui_connect();
 
     return (AppInit(argc, argv) ? 0 : 1);

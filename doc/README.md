@@ -17,8 +17,8 @@ You need the Qt4 run-time libraries to run Dagra-Qt. On Debian or Ubuntu:
 
 Unpack the files into a directory and run:
 
-- bin/32/dagra-qt (GUI, 32-bit) or bin/32/owncoind (headless, 32-bit)
-- bin/64/dagra-qt (GUI, 64-bit) or bin/64/owncoind (headless, 64-bit)
+- bin/32/dagra-qt (GUI, 32-bit) or bin/32/dagrad (headless, 32-bit)
+- bin/64/dagra-qt (GUI, 64-bit) or bin/64/dagrad (headless, 64-bit)
 
 
 
@@ -35,7 +35,7 @@ Drag Dagra-Qt to your applications folder, and then run Dagra-Qt.
 * See the documentation at the [Dagra Wiki](https://en.bitcoin.it/wiki/Main_Page) ***TODO***
 for help and more information.
 * Ask for help on [#mycointest](http://webchat.freenode.net?channels=mycointest) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=mycointest).
-* Ask for help on the [OwncoinTalk](https://owncointalk.org/) forums.
+* Ask for help on the [DagraTalk](https://dagratalk.org/) forums.
 
 Building
 ---------------------
@@ -57,7 +57,7 @@ The Dagra repo's [root README](https://github.com/MegaPixel-UA/dagra/blob/master
 - [Unit Tests](unit-tests.md)
 
 ### Resources
-* Discuss on the [OwncoinTalk](https://owncointalk.org/) forums, in the Development & Technical Discussion board.
+* Discuss on the [DagraTalk](https://dagratalk.org/) forums, in the Development & Technical Discussion board.
 * Discuss on [#mycointest](http://webchat.freenode.net/?channels=mycointest) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=mycointest).
 
 ### Miscellaneous

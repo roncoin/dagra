@@ -146,7 +146,7 @@ Gavin Andresen
 Giel van Schijndel
 Gregory Maxwell
 Jeff Garzik
-Luke Owncoinjr
+Luke Dagrajr
 Matt Corallo
 Michael Ford
 Michael Hendricks

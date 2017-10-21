@@ -144,7 +144,7 @@ public:
 
         vSeeds.clear();
 
-        base58Prefixes[PUBKEY_ADDRESS] = list_of( 76);                    // Dagra addresses start with 'X'
+        base58Prefixes[PUBKEY_ADDRESS] = list_of( 30);                    // Dagra addresses start with 'D'
         base58Prefixes[SCRIPT_ADDRESS] = list_of( 16);                    // Dagra script addresses start with '7'
         base58Prefixes[SECRET_KEY] =     list_of(204);                    // Dagra private keys start with '7' or 'X'
         base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x02)(0xFE)(0x52)(0xF8); // Dagra BIP32 pubkeys start with 'drkv'

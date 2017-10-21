@@ -123,13 +123,13 @@ public:
          *     CTxOut(nValue=50.00000000, scriptPubKey=0xA9037BAC7050C479B121CF)
          *   vMerkleTree: e0028e
          */
-        const char* pszTimestamp = "I create my owncoin 07/12/2015 for test , End its work for me. I hope this guide help you";
+        const char* pszTimestamp = "DagrSol Searching Engine Inc.";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CScriptNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].nValue = 50 * COIN;
-        txNew.vout[0].scriptPubKey = CScript() << ParseHex("0436b2d4b1a72bcad8a8f9b8d12048014bcbbb21df91d84ed172cbcfe8aa6f0e9da5e995fa3b8c63da129c247b73cdd55bac80abc2b67adfbf88381a9889e64177") << OP_CHECKSIG;
+        txNew.vout[0].scriptPubKey = CScript() << ParseHex("04491d698530c23bb26ba4769ccaef6a1813478cfe79fb4dc62f93c9f0a1bf313175458c9460cb3e49d43fc97575530504ddcf47c69f7450a6f2ddcd11da483ac0") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();

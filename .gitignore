@@ -6,10 +6,10 @@ reset-files.bash
 *.tar.gz
 
 *.exe
-src/owncoin
+src/dagra
 src/owncoind
-src/owncoin-cli
-src/owncoin-tx
+src/dagra-cli
+src/dagra-tx
 src/test/test_owncoin
 src/qt/test/test_owncoin-qt
 
@@ -34,8 +34,8 @@ config.log
 config.status
 configure
 libtool
-src/config/owncoin-config.h
-src/config/owncoin-config.h.in
+src/config/dagra-config.h
+src/config/dagra-config.h.in
 src/config/stamp-h1
 share/setup.nsi
 share/qt/Info.plist
@@ -60,7 +60,7 @@ src/qt/test/moc*.cpp
 *.o
 *.o-*
 *.patch
-.owncoin
+.dagra
 *.a
 *.pb.cc
 *.pb.h
@@ -79,12 +79,12 @@ src/qt/test/moc*.cpp
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-owncoin-qt
-Owncoin-Qt.app
+dagra-qt
+Dagra-Qt.app
 
 # Unit-tests
 Makefile.test
-owncoin-qt_test
+dagra-qt_test
 src/test/buildenv.py
 
 # Resources cpp

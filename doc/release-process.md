@@ -2,7 +2,7 @@ Release Process
 ====================
 
 * update translations (ping wumpus, Diapolo or tcatm on IRC)
-* see https://github.com/MegaPixel-UA/owncoin/blob/master/doc/translation_process.md#syncing-with-transifex
+* see https://github.com/MegaPixel-UA/dagra/blob/master/doc/translation_process.md#syncing-with-transifex
 
 * * *
 
@@ -33,7 +33,7 @@ Release Process
 
 	export SIGNER=(your gitian key, ie bluematt, sipa, etc)
 	export VERSION=(new version, e.g. 0.8.0)
-	pushd ./owncoin
+	pushd ./dagra
 	git checkout v${VERSION}
 	popd
 	pushd ./gitian-builder
@@ -54,29 +54,29 @@ Release Process
 
   By default, gitian will fetch source files as needed. For offline builds, they can be fetched ahead of time:
 
-	make -C ../owncoin/depends download SOURCES_PATH=`pwd`/cache/common
+	make -C ../dagra/depends download SOURCES_PATH=`pwd`/cache/common
 
   Only missing files will be fetched, so this is safe to re-run for each build.
 
-###Build Owncoin Core for Linux, Windows, and OS X:
+###Build Dagra Core for Linux, Windows, and OS X:
 
-	./bin/gbuild --commit owncoin=v${VERSION} ../owncoin/contrib/gitian-descriptors/gitian-linux.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../owncoin/contrib/gitian-descriptors/gitian-linux.yml
-	mv build/out/owncoin-*.tar.gz build/out/src/owncoin-*.tar.gz ../
-	./bin/gbuild --commit owncoin=v${VERSION} ../owncoin/contrib/gitian-descriptors/gitian-win.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-win --destination ../gitian.sigs/ ../owncoin/contrib/gitian-descriptors/gitian-win.yml
-	mv build/out/owncoin-*.zip build/out/owncoin-*.exe ../
-	./bin/gbuild --commit bitcoin=v${VERSION} ../owncoin/contrib/gitian-descriptors/gitian-osx.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../owncoin/contrib/gitian-descriptors/gitian-osx.yml
-	mv build/out/owncoin-*-unsigned.tar.gz inputs/owncoin-osx-unsigned.tar.gz
-	mv build/out/owncoin-*.tar.gz build/out/owncoin-*.dmg ../
+	./bin/gbuild --commit dagra=v${VERSION} ../dagra/contrib/gitian-descriptors/gitian-linux.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../dagra/contrib/gitian-descriptors/gitian-linux.yml
+	mv build/out/dagra-*.tar.gz build/out/src/dagra-*.tar.gz ../
+	./bin/gbuild --commit dagra=v${VERSION} ../dagra/contrib/gitian-descriptors/gitian-win.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-win --destination ../gitian.sigs/ ../dagra/contrib/gitian-descriptors/gitian-win.yml
+	mv build/out/dagra-*.zip build/out/dagra-*.exe ../
+	./bin/gbuild --commit bitcoin=v${VERSION} ../dagra/contrib/gitian-descriptors/gitian-osx.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../dagra/contrib/gitian-descriptors/gitian-osx.yml
+	mv build/out/dagra-*-unsigned.tar.gz inputs/dagra-osx-unsigned.tar.gz
+	mv build/out/dagra-*.tar.gz build/out/dagra-*.dmg ../
 	popd
   Build output expected:
 
-  1. source tarball (owncoin-${VERSION}.tar.gz)
-  2. linux 32-bit and 64-bit binaries dist tarballs (owncoin-${VERSION}-linux[32|64].tar.gz)
-  3. windows 32-bit and 64-bit installers and dist zips (owncoin-${VERSION}-win[32|64]-setup.exe, owncoin-${VERSION}-win[32|64].zip)
-  4. OSX unsigned installer (owncoin-${VERSION}-osx-unsigned.dmg)
+  1. source tarball (dagra-${VERSION}.tar.gz)
+  2. linux 32-bit and 64-bit binaries dist tarballs (dagra-${VERSION}-linux[32|64].tar.gz)
+  3. windows 32-bit and 64-bit installers and dist zips (dagra-${VERSION}-win[32|64]-setup.exe, dagra-${VERSION}-win[32|64].zip)
+  4. OSX unsigned installer (dagra-${VERSION}-osx-unsigned.dmg)
   5. Gitian signatures (in gitian.sigs/${VERSION}-<linux|win|osx-unsigned>/(your gitian key)/
 
 ###Next steps:
@@ -100,9 +100,9 @@ Commit your signature to gitian.sigs:
 	pushd ./gitian-builder
 	# Fetch the signature as instructed by Evan
 	cp signature.tar.gz inputs/
-	./bin/gbuild -i ../owncoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../owncoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-	mv build/out/owncoin-osx-signed.dmg ../owncoin-${VERSION}-osx.dmg
+	./bin/gbuild -i ../dagra/contrib/gitian-descriptors/gitian-osx-signer.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../dagra/contrib/gitian-descriptors/gitian-osx-signer.yml
+	mv build/out/dagra-osx-signed.dmg ../dagra-${VERSION}-osx.dmg
 	popd
 
 Commit your signature for the signed OSX binary:
@@ -153,13 +153,13 @@ rm SHA256SUMS
 
   - Release sticky on owncointalk: https://owncointalk.org/index.php?board=1.0 ***TODO***
 
-  - Owncoin-development mailing list
+  - Dagra-development mailing list
 
   - Update title of #mycointest on Freenode IRC
 
   - Optionally reddit /r/Mycointest, ... but this will usually sort out itself
 
-- Notify Flare (?) ***TODO*** so that he can start building [https://launchpad.net/~mycointest/+archive/ubuntu/owncoin](the PPAs) ***TODO***
+- Notify Flare (?) ***TODO*** so that he can start building [https://launchpad.net/~mycointest/+archive/ubuntu/dagra](the PPAs) ***TODO***
 
 - Add release notes for the new version to the directory `doc/release-notes` in git master
 

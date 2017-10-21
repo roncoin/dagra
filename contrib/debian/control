@@ -1,4 +1,4 @@
-Source: owncoin
+Source: dagra
 Section: utils
 Priority: optional
 Maintainer: Jonas Smedegaard <dr@jones.dk> ***TODO***
@@ -23,14 +23,14 @@ Build-Depends: debhelper,
  libprotobuf-dev, protobuf-compiler
 Standards-Version: 3.9.2
 Homepage: http://www.mycointest.io/
-Vcs-Git: git://github.com/MegaPixel-UA/owncoin.git
-Vcs-Browser: http://github.com/MegaPixel-UA/owncoin
+Vcs-Git: git://github.com/MegaPixel-UA/dagra.git
+Vcs-Browser: http://github.com/MegaPixel-UA/dagra
 
 Package: owncoind
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - daemon
- Owncoin is a free open source peer-to-peer electronic cash system that
+ Dagra is a free open source peer-to-peer electronic cash system that
  is completely decentralized, without the need for a central server or
  trusted parties.  Users hold the crypto keys to their own money and
  transact directly with each other, with the help of a P2P network to
@@ -40,13 +40,13 @@ Description: peer-to-peer network based digital currency - daemon
  requires 1+ GB of space, slowly growing.
  .
  This package provides the daemon, owncoind, and the CLI tool
- owncoin-cli to interact with the daemon.
+ dagra-cli to interact with the daemon.
 
-Package: owncoin-qt
+Package: dagra-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - Qt GUI
- Owncoin is a free open source peer-to-peer electronic cash system that
+ Dagra is a free open source peer-to-peer electronic cash system that
  is completely decentralized, without the need for a central server or
  trusted parties.  Users hold the crypto keys to their own money and
  transact directly with each other, with the help of a P2P network to
@@ -55,4 +55,4 @@ Description: peer-to-peer network based digital currency - Qt GUI
  Full transaction history is stored locally at each client.  This
  requires 1+ GB of space, slowly growing.
  .
- This package provides Owncoin-Qt, a GUI for Owncoin based on Qt.
+ This package provides Dagra-Qt, a GUI for Dagra based on Qt.

@@ -1,4 +1,4 @@
-Owncoin Core 0.12.0
+Dagra Core 0.12.0
 =====================
 
 Setup
@@ -7,46 +7,46 @@ Setup
 
 Running
 ---------------------
-The following are some helpful notes on how to run Owncoin on your native platform.
+The following are some helpful notes on how to run Dagra on your native platform.
 
 ### Unix
 
-You need the Qt4 run-time libraries to run Owncoin-Qt. On Debian or Ubuntu:
+You need the Qt4 run-time libraries to run Dagra-Qt. On Debian or Ubuntu:
 
 	sudo apt-get install libqtgui4
 
 Unpack the files into a directory and run:
 
-- bin/32/owncoin-qt (GUI, 32-bit) or bin/32/owncoind (headless, 32-bit)
-- bin/64/owncoin-qt (GUI, 64-bit) or bin/64/owncoind (headless, 64-bit)
+- bin/32/dagra-qt (GUI, 32-bit) or bin/32/owncoind (headless, 32-bit)
+- bin/64/dagra-qt (GUI, 64-bit) or bin/64/owncoind (headless, 64-bit)
 
 
 
 ### Windows
 
-Unpack the files into a directory, and then run owncoin-qt.exe.
+Unpack the files into a directory, and then run dagra-qt.exe.
 
 ### OSX
 
-Drag Owncoin-Qt to your applications folder, and then run Owncoin-Qt.
+Drag Dagra-Qt to your applications folder, and then run Dagra-Qt.
 
 ### Need Help?
 
-* See the documentation at the [Owncoin Wiki](https://en.bitcoin.it/wiki/Main_Page) ***TODO***
+* See the documentation at the [Dagra Wiki](https://en.bitcoin.it/wiki/Main_Page) ***TODO***
 for help and more information.
 * Ask for help on [#mycointest](http://webchat.freenode.net?channels=mycointest) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=mycointest).
 * Ask for help on the [OwncoinTalk](https://owncointalk.org/) forums.
 
 Building
 ---------------------
-The following are developer notes on how to build Owncoin on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build Dagra on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [OSX Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
 
 Development
 ---------------------
-The Owncoin repo's [root README](https://github.com/MegaPixel-UA/owncoin/blob/master/README.md) contains relevant information on the development process and automated testing.
+The Dagra repo's [root README](https://github.com/MegaPixel-UA/dagra/blob/master/README.md) contains relevant information on the development process and automated testing.
 
 - [Coding Guidelines](coding.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)

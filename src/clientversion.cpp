@@ -10,10 +10,10 @@
 
 /**
  * Name of client reported in the 'version' message. Report the same name
- * for both owncoind and owncoin-qt, to make it harder for attackers to
+ * for both owncoind and dagra-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("Owncoin Core");
+const std::string CLIENT_NAME("Dagra Core");
 
 /**
  * Client version number

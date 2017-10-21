@@ -73,6 +73,6 @@ f.write('static const char UNUSED *owncoin_strings[] = {\n')
 messages.sort(key=operator.itemgetter(0))
 for (msgid, msgstr) in messages:
     if msgid != EMPTY:
-        f.write('QT_TRANSLATE_NOOP("owncoin-core", %s),\n' % ('\n'.join(msgid)))
+        f.write('QT_TRANSLATE_NOOP("dagra-core", %s),\n' % ('\n'.join(msgid)))
 f.write('};\n')
 f.close()

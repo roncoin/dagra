@@ -1,6 +1,6 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
-// Copyright (c) 2014-2015 The Owncoin developers
+// Copyright (c) 2014-2015 The Dagra developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -104,14 +104,14 @@ public:
         pchMessageStart[3] = 0x4f;
         vAlertPubKey = ParseHex("04491d698530c23bb26ba4769ccaef6a1813478cfe79fb4dc62f93c9f0a1bf313175458c9460cb3e49d43fc97575530504ddcf47c69f7450a6f2ddcd11da483ac0");
         nDefaultPort = 9887;
-        bnProofOfWorkLimit = ~uint256(0) >> 20;  // Owncoin starting difficulty is 1 / 2^12
+        bnProofOfWorkLimit = ~uint256(0) >> 20;  // Dagra starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210000;
         nEnforceBlockUpgradeMajority = 750;
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
-        nTargetTimespan = 24 * 60 * 60; // Owncoin: 1 day
-        nTargetSpacing = 2.5 * 60; // Owncoin: 2.5 minutes
+        nTargetTimespan = 24 * 60 * 60; // Dagra: 1 day
+        nTargetSpacing = 2.5 * 60; // Dagra: 2.5 minutes
 
         /**
          * Build the genesis block. Note that the output of the genesis coinbase cannot
@@ -144,12 +144,12 @@ public:
 
         vSeeds.clear();
 
-        base58Prefixes[PUBKEY_ADDRESS] = list_of( 76);                    // Owncoin addresses start with 'X'
-        base58Prefixes[SCRIPT_ADDRESS] = list_of( 16);                    // Owncoin script addresses start with '7'
-        base58Prefixes[SECRET_KEY] =     list_of(204);                    // Owncoin private keys start with '7' or 'X'
-        base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x02)(0xFE)(0x52)(0xF8); // Owncoin BIP32 pubkeys start with 'drkv'
-        base58Prefixes[EXT_SECRET_KEY] = list_of(0x02)(0xFE)(0x52)(0xCC); // Owncoin BIP32 prvkeys start with 'drkp'
-        base58Prefixes[EXT_COIN_TYPE]  = list_of(0x80000005);             // Owncoin BIP44 coin type is '5'
+        base58Prefixes[PUBKEY_ADDRESS] = list_of( 76);                    // Dagra addresses start with 'X'
+        base58Prefixes[SCRIPT_ADDRESS] = list_of( 16);                    // Dagra script addresses start with '7'
+        base58Prefixes[SECRET_KEY] =     list_of(204);                    // Dagra private keys start with '7' or 'X'
+        base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x02)(0xFE)(0x52)(0xF8); // Dagra BIP32 pubkeys start with 'drkv'
+        base58Prefixes[EXT_SECRET_KEY] = list_of(0x02)(0xFE)(0x52)(0xCC); // Dagra BIP32 prvkeys start with 'drkp'
+        base58Prefixes[EXT_COIN_TYPE]  = list_of(0x80000005);             // Dagra BIP44 coin type is '5'
 
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
 
@@ -194,8 +194,8 @@ public:
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;
         nMinerThreads = 0;
-        nTargetTimespan = 24 * 60 * 60; // Owncoin: 1 day
-        nTargetSpacing = 2.5 * 60; // Owncoin: 2.5 minutes
+        nTargetTimespan = 24 * 60 * 60; // Dagra: 1 day
+        nTargetSpacing = 2.5 * 60; // Dagra: 2.5 minutes
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1508603401;
@@ -207,16 +207,16 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         /*vSeeds.push_back(CDNSSeedData("mycointest.io", "testnet-seed.mycointest.io"));
-        vSeeds.push_back(CDNSSeedData("owncoin.qa", "testnet-seed.owncoin.qa"));
+        vSeeds.push_back(CDNSSeedData("dagra.qa", "testnet-seed.dagra.qa"));
         *///legacy seeders
         vSeeds.clear();
 
-        base58Prefixes[PUBKEY_ADDRESS] = list_of(139);                    // Testnet owncoin addresses start with 'x' or 'y'
-        base58Prefixes[SCRIPT_ADDRESS] = list_of( 19);                    // Testnet owncoin script addresses start with '8' or '9'
+        base58Prefixes[PUBKEY_ADDRESS] = list_of(139);                    // Testnet dagra addresses start with 'x' or 'y'
+        base58Prefixes[SCRIPT_ADDRESS] = list_of( 19);                    // Testnet dagra script addresses start with '8' or '9'
         base58Prefixes[SECRET_KEY]     = list_of(239);                    // Testnet private keys start with '9' or 'c' (Bitcoin defaults)
-        base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x3a)(0x80)(0x61)(0xa0); // Testnet owncoin BIP32 pubkeys start with 'DRKV'
-        base58Prefixes[EXT_SECRET_KEY] = list_of(0x3a)(0x80)(0x58)(0x37); // Testnet owncoin BIP32 prvkeys start with 'DRKP'
-        base58Prefixes[EXT_COIN_TYPE]  = list_of(0x80000001);             // Testnet owncoin BIP44 coin type is '5' (All coin's testnet default)
+        base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x3a)(0x80)(0x61)(0xa0); // Testnet dagra BIP32 pubkeys start with 'DRKV'
+        base58Prefixes[EXT_SECRET_KEY] = list_of(0x3a)(0x80)(0x58)(0x37); // Testnet dagra BIP32 prvkeys start with 'DRKP'
+        base58Prefixes[EXT_COIN_TYPE]  = list_of(0x80000001);             // Testnet dagra BIP44 coin type is '5' (All coin's testnet default)
 
         convertSeed6(vFixedSeeds, pnSeed6_test, ARRAYLEN(pnSeed6_test));
 
@@ -258,8 +258,8 @@ public:
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 1;
-        nTargetTimespan = 24 * 60 * 60; // Owncoin: 1 day
-        nTargetSpacing = 2.5 * 60; // Owncoin: 2.5 minutes
+        nTargetTimespan = 24 * 60 * 60; // Dagra: 1 day
+        nTargetSpacing = 2.5 * 60; // Dagra: 2.5 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
         genesis.nTime = 1508603402;
         genesis.nBits = 0x207fffff;

@@ -64,11 +64,11 @@ if BUILD_BITCOIND
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += owncoin-cli owncoin-tx
+  bin_PROGRAMS += dagra-cli dagra-tx
 endif
 
 .PHONY: FORCE
-# owncoin core #
+# dagra core #
 BITCOIN_CORE_H = \
   activemasternode.h \
   addrman.h \
@@ -170,7 +170,7 @@ obj/build.h: FORCE
 	  $(abs_top_srcdir)
 libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between owncoind and owncoin-qt
+# server: shared between owncoind and dagra-qt
 libbitcoin_server_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS)
 libbitcoin_server_a_SOURCES = \
   addrman.cpp \
@@ -202,7 +202,7 @@ libbitcoin_server_a_SOURCES = \
   $(JSON_H) \
   $(BITCOIN_CORE_H)
 
-# wallet: shared between owncoind and owncoin-qt, but only linked
+# wallet: shared between owncoind and dagra-qt, but only linked
 # when wallet enabled
 libbitcoin_wallet_a_CPPFLAGS = $(BITCOIN_INCLUDES)
 libbitcoin_wallet_a_SOURCES = \
@@ -278,7 +278,7 @@ univalue_libbitcoin_univalue_a_SOURCES = \
   univalue/univalue_escapes.h \
   univalue/univalue.h
 
-# common: shared between owncoind, and owncoin-qt and non-server tools
+# common: shared between owncoind, and dagra-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(BITCOIN_INCLUDES)
 libbitcoin_common_a_SOURCES = \
   allocators.cpp \
@@ -333,7 +333,7 @@ libbitcoin_util_a_SOURCES += compat/glibc_compat.cpp
 libbitcoin_util_a_SOURCES += compat/glibcxx_compat.cpp
 endif
 
-# cli: shared between owncoin-cli and owncoin-qt
+# cli: shared between dagra-cli and dagra-qt
 libbitcoin_cli_a_CPPFLAGS = $(BITCOIN_INCLUDES)
 libbitcoin_cli_a_SOURCES = \
   rpcclient.cpp \
@@ -367,7 +367,7 @@ owncoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPN
 owncoind_CPPFLAGS = $(BITCOIN_INCLUDES)
 owncoind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
-# owncoin-cli binary #
+# dagra-cli binary #
 owncoin_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBBITCOIN_UTIL) \
@@ -376,12 +376,12 @@ owncoin_cli_LDADD = \
   $(CRYPTO_LIBS)
 
 owncoin_cli_SOURCES = \
-  owncoin-cli.cpp
+  dagra-cli.cpp
 
 owncoin_cli_CPPFLAGS = $(BITCOIN_INCLUDES)
 #
 
-# owncoin-tx binary #
+# dagra-tx binary #
 owncoin_tx_LDADD = \
   $(LIBBITCOIN_UNIVALUE) \
   $(LIBBITCOIN_COMMON) \
@@ -391,13 +391,13 @@ owncoin_tx_LDADD = \
   $(BOOST_LIBS) \
   $(CRYPTO_LIBS)
 
-owncoin_tx_SOURCES = owncoin-tx.cpp
+owncoin_tx_SOURCES = dagra-tx.cpp
 owncoin_tx_CPPFLAGS = $(BITCOIN_INCLUDES)
 #
 owncoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-owncoin_cli_SOURCES += owncoin-cli-res.rc
+owncoin_cli_SOURCES += dagra-cli-res.rc
 endif
 owncoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 

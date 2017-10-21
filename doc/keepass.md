@@ -12,7 +12,7 @@ The implementation is dependent on the following:
 
 ###What's new###
 
-The following new options are available for owncoind and owncoin-qt:
+The following new options are available for owncoind and dagra-qt:
  - _-keepass_ Use KeePass 2 integration using KeePassHttp plugin (default: 0)
  - _-keepassport=_ Connect to KeePassHttp on port (default: 19455)
  - _-keepasskey=_ KeePassHttp key for AES encrypted communication with KeePass
@@ -32,7 +32,7 @@ Sample initialization flow from _owncoin-qt_ console (this needs to be done only
  - Have KeePass running with an open database
  - Start _owncoin-qt_
  - Open console
- - Type "_keepass init_" in owncoin-qt console
+ - Type "_keepass init_" in dagra-qt console
  - Keepass pops up and asks for an association id, fill that in, for example, "_mydrkwallet_"
  - You should get a response like this "_Association successful. Id: mydrkwalletowncoin - Key: AgQkcs6cI7v9tlSYKjG/+s8wJrGALHl3jLosJpPLzUE=_"
  - Edit _owncoin.conf_ and fill in these values

@@ -93,7 +93,7 @@ public:
 };
 
 /**
- * Owncoin RPC command dispatcher.
+ * Dagra RPC command dispatcher.
  */
 class CRPCTable
 {

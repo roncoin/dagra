@@ -1,7 +1,7 @@
-TOR SUPPORT IN OWNCOIN
+TOR SUPPORT IN DAGRA
 =======================
 
-It is possible to run Owncoin as a Tor hidden service, and connect to such services.
+It is possible to run Dagra as a Tor hidden service, and connect to such services.
 
 The following directions assume you have a Tor proxy running on port 9050. Many
 distributions default to having a SOCKS proxy listening on port 9050, but others
@@ -10,10 +10,10 @@ port. See [Tor Project FAQ:TBBSocksPort](https://www.torproject.org/docs/faq.htm
 for how to properly configure Tor.
 
 
-1. Run owncoin behind a Tor proxy
+1. Run dagra behind a Tor proxy
 ----------------------------------
 
-The first step is running Owncoin behind a Tor proxy. This will already make all
+The first step is running Dagra behind a Tor proxy. This will already make all
 outgoing connections be anonymized, but more is possible.
 
 	-proxy=ip:port  Set the proxy server. If SOCKS5 is selected (default), this proxy
@@ -44,24 +44,24 @@ In a typical situation, this suffices to run behind a Tor proxy:
 	./owncoind -proxy=127.0.0.1:9050
 
 
-2. Run a owncoin hidden server
+2. Run a dagra hidden server
 -------------------------------
 
 If you configure your Tor system accordingly, it is possible to make your node also
 reachable from the Tor network. Add these lines to your /etc/tor/torrc (or equivalent
 config file):
 
-	HiddenServiceDir /var/lib/tor/owncoin-service/
+	HiddenServiceDir /var/lib/tor/dagra-service/
 	HiddenServicePort 9999 127.0.0.1:9999
 	HiddenServicePort 19999 127.0.0.1:19999
 
 The directory can be different of course, but (both) port numbers should be equal to
 your owncoind's P2P listen port (9999 by default).
 
-	-externalip=X   You can tell owncoin about its publicly reachable address using
+	-externalip=X   You can tell dagra about its publicly reachable address using
 	                this option, and this can be a .onion address. Given the above
 	                configuration, you can find your onion address in
-	                /var/lib/tor/owncoin-service/hostname. Onion addresses are given
+	                /var/lib/tor/dagra-service/hostname. Onion addresses are given
 	                preference for your node to advertize itself with, for connections
 	                coming from unroutable addresses (such as 127.0.0.1, where the
 	                Tor proxy typically runs).
@@ -94,7 +94,7 @@ for normal IPv4/IPv6 communication, use:
 	./owncoind -onion=127.0.0.1:9050 -externalip=ssapp53tmftyjmjb.onion -discover
 
 
-3. List of known owncoin Tor relays
+3. List of known dagra Tor relays
 ------------------------------------
 
 * [owncoinie7ghp67.onion](http://owncoinie7ghp67.onion/)

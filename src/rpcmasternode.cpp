@@ -34,7 +34,7 @@ void SendMoney(const CTxDestination &address, CAmount nValue, CWalletTx& wtxNew,
         throw JSONRPCError(RPC_WALLET_ERROR, strError);
     }
 
-    // Parse Owncoin address
+    // Parse Dagra address
     CScript scriptPubKey = GetScriptForDestination(address);
 
     // Create and send the transaction
@@ -84,7 +84,7 @@ Value darksend(const Array& params, bool fHelp)
 
     CBitcoinAddress address(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Owncoin address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Dagra address");
 
     // Amount
     CAmount nAmount = AmountFromValue(params[1]);
@@ -140,7 +140,7 @@ Value masternode(const Array& params, bool fHelp)
                 "  genkey       - Generate new masternodeprivkey\n"
                 "  enforce      - Enforce masternode payments\n"
                 "  outputs      - Print masternode compatible outputs\n"
-                "  start        - Start masternode configured in owncoin.conf\n"
+                "  start        - Start masternode configured in dagra.conf\n"
                 "  start-alias  - Start single masternode by assigned alias configured in masternode.conf\n"
                 "  start-<mode> - Start masternodes configured in masternode.conf (<mode>: 'all', 'missing', 'disabled')\n"
                 "  status       - Print masternode status information\n"

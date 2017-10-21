@@ -23,8 +23,8 @@ Build-Depends: debhelper,
  libprotobuf-dev, protobuf-compiler
 Standards-Version: 3.9.2
 Homepage: http://www.mycointest.io/
-Vcs-Git: git://github.com/mycointest/owncoin.git
-Vcs-Browser: http://github.com/mycointest/owncoin
+Vcs-Git: git://github.com/MegaPixel-UA/owncoin.git
+Vcs-Browser: http://github.com/MegaPixel-UA/owncoin
 
 Package: owncoind
 Architecture: any

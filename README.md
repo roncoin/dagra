@@ -18,7 +18,7 @@ are carried out collectively by the network. Dagra Core is the name of open
 source software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Dagra Core software, see https://www.mycointest.io/downloads.
+the Dagra Core software, see https://www.dagrsol.ru/downloads.
 
 
 License

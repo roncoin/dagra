@@ -137,7 +137,7 @@ I usually confirm that remote is on the correct block by issuing:
 
 ```dagrad getinfo```
 
-And compare with the official explorer at http://explorer.mycointest.io/chain/Dagra
+And compare with the official explorer at http://explorer.dagrsol.ru/chain/Dagra
 
 ### Local
 

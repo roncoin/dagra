@@ -4,7 +4,7 @@
 
 Dagra Core version 0.12.0 is now available from:
 
-  https://mycointest.io/downloads
+  https://dagrsol.ru/downloads
 
 Please report bugs using the issue tracker at github:
 

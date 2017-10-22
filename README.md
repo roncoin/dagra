@@ -1,7 +1,7 @@
 Dagra Core staging tree 0.12
 ===============================
 
-https://www.mycointest.io
+https://www.dagrsol.ru
 
 Copyright (c) 2009-2015 Bitcoin Core Developers
 

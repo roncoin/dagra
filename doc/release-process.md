@@ -134,7 +134,7 @@ rm SHA256SUMS
 - Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the bitcoin.org server
   into `/var/www/bin/bitcoin-core-${VERSION}`
 
-- Update mycointest.io version ***TODO***
+- Update dagrsol.ru version ***TODO***
 
   - First, check to see if the mycointest.io maintainers have prepared a
     release: https://github.com/bitcoin/bitcoin.org/labels/Releases

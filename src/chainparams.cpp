@@ -155,7 +155,7 @@ public:
 
         fRequireRPCPassword = true;
         fMiningRequiresPeers = true;
-        fAllowMinDifficultyBlocks = false;
+        fAllowMinDifficultyBlocks = false; 
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
         fMineBlocksOnDemand = false;
@@ -206,10 +206,7 @@ public:
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        /*vSeeds.push_back(CDNSSeedData("mycointest.io", "testnet-seed.mycointest.io"));
-        vSeeds.push_back(CDNSSeedData("dagra.qa", "testnet-seed.dagra.qa"));
-        *///legacy seeders
-        vSeeds.clear();
+        
 
         base58Prefixes[PUBKEY_ADDRESS] = list_of(139);                    // Testnet dagra addresses start with 'x' or 'y'
         base58Prefixes[SCRIPT_ADDRESS] = list_of( 19);                    // Testnet dagra script addresses start with '8' or '9'

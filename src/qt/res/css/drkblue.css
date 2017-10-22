@@ -816,6 +816,7 @@ QWidget .QFrame#frameBalances .QLabel#labelWatchTotal { /* Watch-only Total Bala
 
 QWidget .QFrame#frameDarksend { /* Darksend Widget */
     background-color: #ffffff;
+	display:none !important;
 }
 
 QWidget .QFrame#frameDarksend .QLabel#labelDarksend { /* Darksend Header */

@@ -3,9 +3,9 @@ Dagra Core staging tree 0.12
 
 https://www.dagrsol.ru
 
-Copyright (c) 2009-2015 Bitcoin Core Developers
+Copyright (c) 2009-2017 Bitcoin Core Developers
 
-Copyright (c) 2014-2015 Dagra Core Developers
+Copyright (c) 2014-2017 Dagra Core Developers
 
 
 What is Dagra?

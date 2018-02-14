@@ -17,7 +17,7 @@
   <string>APPL</string>
 
   <key>CFBundleGetInfoString</key>
-  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@, Copyright © 2009-@COPYRIGHT_YEAR@ The Bitcoin Core developers, 2014-@COPYRIGHT_YEAR@ The Dagra Core developers</string>
+  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@, Copyright © 2009-@COPYRIGHT_YEAR@ The Bitcoin Core developers, 2014-@COPYRIGHT_YEAR@ The Dowin Core developers</string>
 
   <key>CFBundleShortVersionString</key>
   <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@</string>
@@ -29,10 +29,10 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>Dagra-Qt</string>
+  <string>Dowin-Qt</string>
 
   <key>CFBundleIdentifier</key>
-  <string>io.mycointest.Dagra-Qt</string>
+  <string>io.mycointest.Dowin-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -40,10 +40,10 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>io.dagra.DagraPayment</string>
+      <string>io.dowin.DowinPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>dagra</string>
+        <string>dowin</string>
       </array>
     </dict>
   </array>
@@ -52,9 +52,9 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>io.dagra.paymentrequest</string>
+      <string>io.dowin.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>Dagra payment request</string>
+      <string>Dowin payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>
@@ -62,7 +62,7 @@
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.mime-type</key>
-        <string>application/x-dagra-payment-request</string>
+        <string>application/x-dowin-payment-request</string>
         <key>public.filename-extension</key>
         <array>
           <string>mycointestmentrequest</string>
@@ -78,7 +78,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>io.dagra.paymentrequest</string>
+        <string>io.dowin.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>

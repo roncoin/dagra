@@ -1,4 +1,4 @@
-Dagra Core 0.12.0
+Dowin Core 0.12.0
 =====================
 
 Setup
@@ -7,46 +7,46 @@ Setup
 
 Running
 ---------------------
-The following are some helpful notes on how to run Dagra on your native platform.
+The following are some helpful notes on how to run Dowin on your native platform.
 
 ### Unix
 
-You need the Qt4 run-time libraries to run Dagra-Qt. On Debian or Ubuntu:
+You need the Qt4 run-time libraries to run Dowin-Qt. On Debian or Ubuntu:
 
 	sudo apt-get install libqtgui4
 
 Unpack the files into a directory and run:
 
-- bin/32/dagra-qt (GUI, 32-bit) or bin/32/dagrad (headless, 32-bit)
-- bin/64/dagra-qt (GUI, 64-bit) or bin/64/dagrad (headless, 64-bit)
+- bin/32/dowin-qt (GUI, 32-bit) or bin/32/dowind (headless, 32-bit)
+- bin/64/dowin-qt (GUI, 64-bit) or bin/64/dowind (headless, 64-bit)
 
 
 
 ### Windows
 
-Unpack the files into a directory, and then run dagra-qt.exe.
+Unpack the files into a directory, and then run dowin-qt.exe.
 
 ### OSX
 
-Drag Dagra-Qt to your applications folder, and then run Dagra-Qt.
+Drag Dowin-Qt to your applications folder, and then run Dowin-Qt.
 
 ### Need Help?
 
-* See the documentation at the [Dagra Wiki](https://en.bitcoin.it/wiki/Main_Page) ***TODO***
+* See the documentation at the [Dowin Wiki](https://en.bitcoin.it/wiki/Main_Page) ***TODO***
 for help and more information.
 * Ask for help on [#mycointest](http://webchat.freenode.net?channels=mycointest) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=mycointest).
-* Ask for help on the [DagraTalk](https://dagratalk.org/) forums.
+* Ask for help on the [DowinTalk](https://dowintalk.org/) forums.
 
 Building
 ---------------------
-The following are developer notes on how to build Dagra on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build Dowin on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [OSX Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
 
 Development
 ---------------------
-The Dagra repo's [root README](https://github.com/MegaPixel-UA/dagra/blob/master/README.md) contains relevant information on the development process and automated testing.
+The Dowin repo's [root README](https://github.com/MegaPixel-UA/dowin/blob/master/README.md) contains relevant information on the development process and automated testing.
 
 - [Coding Guidelines](coding.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)
@@ -57,7 +57,7 @@ The Dagra repo's [root README](https://github.com/MegaPixel-UA/dagra/blob/master
 - [Unit Tests](unit-tests.md)
 
 ### Resources
-* Discuss on the [DagraTalk](https://dagratalk.org/) forums, in the Development & Technical Discussion board.
+* Discuss on the [DowinTalk](https://dowintalk.org/) forums, in the Development & Technical Discussion board.
 * Discuss on [#mycointest](http://webchat.freenode.net/?channels=mycointest) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=mycointest).
 
 ### Miscellaneous

@@ -1,7 +1,7 @@
 [main]
 host = https://www.transifex.com
 
-[dagra.qt-translation-010x]
-file_filter = src/qt/locale/dagra_<lang>.ts
-source_file = src/qt/locale/dagra_en.ts
+[dowin.qt-translation-010x]
+file_filter = src/qt/locale/dowin_<lang>.ts
+source_file = src/qt/locale/dowin_en.ts
 source_lang = en

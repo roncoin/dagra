@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Dowin
+Comment=Dowin P2P Cryptocurrency
+Comment[fr]=Dowin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Dowin, eşten eşe kriptografik sanal para birimi
+Exec=dowin-qt %u
+Terminal=false
+Type=Application
+Icon=dowin128
+MimeType=x-scheme-handler/dowin;
+Categories=Office;Finance;

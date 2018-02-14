@@ -10,10 +10,10 @@
 
 /**
  * Name of client reported in the 'version' message. Report the same name
- * for both dagrad and dagra-qt, to make it harder for attackers to
+ * for both dowind and dowin-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("Dagra Core");
+const std::string CLIENT_NAME("Dowin Core");
 
 /**
  * Client version number

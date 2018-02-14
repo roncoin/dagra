@@ -93,7 +93,7 @@ public:
 };
 
 /**
- * Dagra RPC command dispatcher.
+ * Dowin RPC command dispatcher.
  */
 class CRPCTable
 {

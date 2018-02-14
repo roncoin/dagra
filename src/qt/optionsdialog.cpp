@@ -3,7 +3,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/dagra-config.h"
+#include "config/dowin-config.h"
 #endif
 
 #include "optionsdialog.h"
@@ -82,8 +82,8 @@ OptionsDialog::OptionsDialog(QWidget *parent, bool enableWallet) :
     }
     
     /* Theme selector */
-    ui->theme->addItem(QString("DAGRA-blue"), QVariant("drkblue"));
-    ui->theme->addItem(QString("DAGRA-traditional"), QVariant("trad"));
+    ui->theme->addItem(QString("DOWIN-blue"), QVariant("drkblue"));
+    ui->theme->addItem(QString("DOWIN-traditional"), QVariant("trad"));
 
     
     /* Language selector */

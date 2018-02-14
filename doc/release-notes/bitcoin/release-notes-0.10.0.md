@@ -714,7 +714,7 @@ Thanks to everyone who contributed to this release:
 - kiwigb
 - Kosta Zertsekel
 - LongShao007
-- Luke Dagrajr
+- Luke Dowinjr
 - Mark Friedenbach
 - Mathy Vanvoorden
 - Matt Corallo

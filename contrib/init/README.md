@@ -1,9 +1,9 @@
 Sample configuration files for:
 
-SystemD: dagrad.service
-Upstart: dagrad.conf
-OpenRC:  dagrad.openrc
-         dagrad.openrcconf
+SystemD: dowind.service
+Upstart: dowind.conf
+OpenRC:  dowind.openrc
+         dowind.openrcconf
 
 have been made available to assist packagers in creating node packages here.
 

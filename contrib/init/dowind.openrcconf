@@ -1,0 +1,27 @@
+# /etc/conf.d/dowind: config file for /etc/init.d/dowind
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/dowin/dowin.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/dowind"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/dowind.pid"
+
+# Where to write dowind data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/dowind"
+
+# User and group to own dowind process
+#BITCOIND_USER="dowin"
+#BITCOIND_GROUP="dowin"
+
+# Path to dowind executable
+#BITCOIND_BIN="/usr/bin/dowind"
+
+# Nice value to run dowind under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS="-disablewallet"
+
